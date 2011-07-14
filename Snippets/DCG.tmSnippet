@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>${1:clause} --&amp;gt; ${0:body}.</string>
+	<key>name</key>
+	<string>DCG</string>
+	<key>scope</key>
+	<string>source.prolog</string>
+	<key>tabTrigger</key>
+	<string>dcg</string>
+	<key>uuid</key>
+	<string>238E350A-E0E6-45F3-A3C4-0E94D708F1E0</string>
+</dict>
+</plist>
