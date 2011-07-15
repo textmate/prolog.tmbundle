@@ -6,23 +6,34 @@
 	<string>Syntax</string>
 	<key>settings</key>
 	<dict>
-		<key>decreaseIndentPattern</key>
-		<string>\\n\n$</string>
+		<key>highlightPairs</key>
+		<array>
+			<array>
+				<string>[</string>
+				<string>]</string>
+			</array>
+			<array>
+				<string>(</string>
+				<string>)</string>
+			</array>
+		</array>
 		<key>increaseIndentPattern</key>
 		<string>\:-$</string>
 		<key>smartTypingPairs</key>
 		<array>
 			<array>
-				<string>(</string>
-				<string>)</string>
-			</array>
-			<array>
 				<string>[</string>
 				<string>]</string>
 			</array>
+			<array>
+				<string>(</string>
+				<string>)</string>
+			</array>
 		</array>
+		<key>unIndentedLinePattern</key>
+		<string>\.$</string>
 	</dict>
 	<key>uuid</key>
-	<string>A15298DF-39D4-4AEF-90B2-FF684D327EAD</string>
+	<string>487758CF-13E2-413E-8A12-224771481FE9</string>
 </dict>
 </plist>
