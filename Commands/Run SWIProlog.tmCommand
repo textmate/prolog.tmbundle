@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/bin/bash
+
+TPROLOG=${TM_PROLOG:-swipl}
+
+osascript &lt;&lt;- APPLESCRIPT
+tell application "Terminal"
+	launch
+	activate
+	do script do script "clear; cd \"${TM_DIRECTORY}\"; ${TPROLOG} -f \"${TM_FILEPATH}\""
+	set position of first window to {100, 100}
+end tell
+APPLESCRIPT</string>
+	<key>input</key>
+	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@r</string>
+	<key>name</key>
+	<string>Run in SWIProlog</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>discard</string>
+	<key>scope</key>
+	<string>source.prolog</string>
+	<key>semanticClass</key>
+	<string>process.run.prolog</string>
+	<key>uuid</key>
+	<string>9206350F-2E58-4339-BF2E-0FF730B11B4B</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>
