@@ -4,10 +4,6 @@
 <dict>
 	<key>fileTypes</key>
 	<array/>
-	<key>foldingStartMarker</key>
-	<string>%\s*region \w*</string>
-	<key>foldingStopMarker</key>
-	<string>%\s*end(\s*region)?</string>
 	<key>keyEquivalent</key>
 	<string>^~P</string>
 	<key>name</key>
