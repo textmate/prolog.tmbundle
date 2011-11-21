@@ -7,8 +7,6 @@
 	<key>command</key>
 	<string>#!/bin/bash
 
-TPROLOG=${TM_PROLOG:-gprolog}
-
 esc () {
 STR="$1" ruby &lt;&lt;"RUBY"
    str = ENV['STR']
@@ -22,7 +20,7 @@ osascript &lt;&lt;- APPLESCRIPT
 tell application "Terminal"
 	launch
 	activate
-	do script "clear; cd $(esc "${TM_DIRECTORY}"); ${TPROLOG} --entry-goal \"consult('${TM_FILEPATH}')\""
+	do script "clear; cd $(esc "${TM_DIRECTORY}"); \"${TM_PROLOG:-gprolog}\" --entry-goal \"consult('${TM_FILEPATH}')\""
 	set position of first window to {100, 100}
 end tell
 APPLESCRIPT
@@ -31,15 +29,37 @@ APPLESCRIPT
 </string>
 	<key>input</key>
 	<string>none</string>
+	<key>inputFormat</key>
+	<string>text</string>
 	<key>keyEquivalent</key>
 	<string>@r</string>
 	<key>name</key>
 	<string>Run</string>
-	<key>output</key>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
 	<string>discard</string>
+	<key>requiredCommands</key>
+	<array>
+		<dict>
+			<key>command</key>
+			<string>gprolog</string>
+			<key>locations</key>
+			<array>
+				<string>/opt/local/bin/gprolog</string>
+				<string>/usr/local/bin/gprolog</string>
+			</array>
+			<key>variable</key>
+			<string>TM_PROLOG</string>
+		</dict>
+	</array>
 	<key>scope</key>
 	<string>source.prolog</string>
 	<key>uuid</key>
 	<string>38D17DB7-C0D3-4C05-BD10-A7F78D67DF03</string>
+	<key>version</key>
+	<integer>2</integer>
 </dict>
 </plist>
