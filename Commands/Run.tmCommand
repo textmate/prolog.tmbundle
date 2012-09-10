@@ -57,6 +57,8 @@ APPLESCRIPT
 	</array>
 	<key>scope</key>
 	<string>source.prolog</string>
+	<key>semanticClass</key>
+	<string>process.run.prolog</string>
 	<key>uuid</key>
 	<string>38D17DB7-C0D3-4C05-BD10-A7F78D67DF03</string>
 	<key>version</key>
