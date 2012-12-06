@@ -1,0 +1,11 @@
+Prolog Bundle for Text Mate text and Code editor.
+
+CHANGELOG
+
+[14.07.2011]
+ * Added snippets for Fact, Rule and DCG
+ * Added Syntax rules for [], () and :-
+
+[15.07.2011]
+ * Added Run in SWI-Prolog Command.
+ * [Fix] Fixed info.plist.
