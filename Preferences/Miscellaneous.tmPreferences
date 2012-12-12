@@ -8,6 +8,8 @@
 	<string>source.prolog</string>
 	<key>settings</key>
 	<dict>
+		<key>disableIndentCorrections</key>
+		<true/>
 		<key>highlightPairs</key>
 		<array>
 			<array>
@@ -20,7 +22,9 @@
 			</array>
 		</array>
 		<key>increaseIndentPattern</key>
-		<string>\:-$</string>
+		<string>:-\s*$</string>
+		<key>indentOnPaste</key>
+		<string>simple</string>
 		<key>smartTypingPairs</key>
 		<array>
 			<array>
