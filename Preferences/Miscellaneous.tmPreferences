@@ -4,6 +4,8 @@
 <dict>
 	<key>name</key>
 	<string>Miscellaneous</string>
+	<key>scope</key>
+	<string>source.prolog</string>
 	<key>settings</key>
 	<dict>
 		<key>highlightPairs</key>
