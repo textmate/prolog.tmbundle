@@ -128,7 +128,7 @@
 			I changed this from entity to storage.type, but have no idea what it is -- Allan
 			And I changed this to constant.other.symbol after glancing over the docs,
 			    might still be wrong.  -- Infininight
-			symbol fits better than storage.type,
+			constant fits better than storage.type,
 			since lower-case constants represent atoms,
 			    i.e. fixed entities. -- sebgod
 			</string>
@@ -139,7 +139,7 @@
 		</dict>
 	</array>
 	<key>scopeName</key>
-	<string>source.source.prolog</string>
+	<string>source.prolog</string>
 	<key>uuid</key>
 	<string>C0E2ADB0-1706-4A28-8DB7-263BDC8B5C5C</string>
 </dict>
