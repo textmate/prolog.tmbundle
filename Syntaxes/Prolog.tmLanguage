@@ -18,7 +18,7 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.begin.prolog</string>
+					<string>punctuation.definition.string.begin.source.prolog</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -28,24 +28,24 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.end.prolog</string>
+					<string>punctuation.definition.string.end.source.prolog</string>
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>string.quoted.single.prolog</string>
+			<string>string.quoted.single.source.prolog</string>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>match</key>
 					<string>\\.</string>
 					<key>name</key>
-					<string>constant.character.escape.prolog</string>
+					<string>constant.character.escape.source.prolog</string>
 				</dict>
 				<dict>
 					<key>match</key>
 					<string>''</string>
 					<key>name</key>
-					<string>constant.character.escape.quote.prolog</string>
+					<string>constant.character.escape.quote.source.prolog</string>
 				</dict>
 			</array>
 		</dict>
@@ -57,13 +57,13 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.prolog</string>
+					<string>punctuation.definition.comment.source.prolog</string>
 				</dict>
 			</dict>
 			<key>end</key>
 			<string>\*/</string>
 			<key>name</key>
-			<string>comment.block.prolog</string>
+			<string>comment.block.source.prolog</string>
 		</dict>
 		<dict>
 			<key>begin</key>
@@ -73,7 +73,7 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.whitespace.comment.leading.prolog</string>
+					<string>punctuation.whitespace.comment.leading.source.prolog</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -88,27 +88,39 @@
 						<key>0</key>
 						<dict>
 							<key>name</key>
-							<string>punctuation.definition.comment.prolog</string>
+							<string>punctuation.definition.comment.source.prolog</string>
 						</dict>
 					</dict>
 					<key>end</key>
-					<string>\n</string>
+					<string>(?=\n)</string>
 					<key>name</key>
-					<string>comment.line.percentage.prolog</string>
+					<string>comment.line.percentage.source.prolog</string>
 				</dict>
 			</array>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>:-</string>
+			<string>:- ((use_)?module)</string>
 			<key>name</key>
-			<string>keyword.operator.definition.prolog</string>
+			<string>keyword.operator.definition.source.prolog</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b[A-Z][a-zA-Z0-9_]*\b</string>
 			<key>name</key>
-			<string>variable.other.prolog</string>
+			<string>variable.other.source.prolog</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b[a-z][a-zA-Z0-9_]*(?=:)</string>
+			<key>name</key>
+			<string>module.namespace.other.source.prolog</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b[a-z][a-zA-Z0-9_]*(?=\()</string>
+			<key>name</key>
+			<string>module.function.other.source.prolog</string>
 		</dict>
 		<dict>
 			<key>comment</key>
@@ -116,15 +128,18 @@
 			I changed this from entity to storage.type, but have no idea what it is -- Allan
 			And I changed this to constant.other.symbol after glancing over the docs,
 			    might still be wrong.  -- Infininight
+			symbol fits better than storage.type,
+			since lower-case constants represent atoms,
+			    i.e. fixed entities. -- sebgod
 			</string>
 			<key>match</key>
-			<string>\b[a-z][a-zA-Z0-9_]*\b</string>
+			<string>\b[a-z][a-zA-Z0-9_]*(?!\()</string>
 			<key>name</key>
-			<string>constant.other.symbol.prolog</string>
+			<string>constant.other.symbol.source.prolog</string>
 		</dict>
 	</array>
 	<key>scopeName</key>
-	<string>source.prolog</string>
+	<string>source.source.prolog</string>
 	<key>uuid</key>
 	<string>C0E2ADB0-1706-4A28-8DB7-263BDC8B5C5C</string>
 </dict>
